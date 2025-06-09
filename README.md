@@ -20,6 +20,11 @@ A JavaFX application for comparing classification and regression algorithms from
 
 1. Clone the repository
 2. Build the project with Maven
+3. Download Weka and JavaFX libraries:   https://openjfx.io/
+4. Add Weka and JavaFX libraries into your project (in InelliJ: RightClick project -> Open Module Settings -> Libraries -> Add all from the /lib for JavaFX and Weka)
+5. In project configuration add in VM options:
+
+--module-path "yourPath\javafx-sdk-24.0.1\lib" --add-modules javafx.controls,javafx.fxml 
 
 ## Running the Application
 
