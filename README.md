@@ -56,14 +56,21 @@ Classification (iris.arff):
 @relation iris
 
 @attribute sepallength numeric
+
 @attribute sepalwidth numeric
+
 @attribute petallength numeric
+
 @attribute petalwidth numeric
+
 @attribute class {Iris-setosa,Iris-versicolor,Iris-virginica}
 
 @data
+
 5.1,3.5,1.4,0.2,Iris-setosa
+
 4.9,3.0,1.4,0.2,Iris-setosa
+
 ...
 
 
@@ -73,22 +80,33 @@ Regression (housing.arff):
 @relation housing
 
 @attribute house_size numeric
+
 @attribute bedrooms numeric
+
 @attribute age numeric
+
 @attribute price numeric
 
 @data
+
 2100,3,15,399900
+
 1600,3,40,329900
+
 ...
 
 ## Troubleshooting
 
 1. "Can't have more folds than instances!"
+
 Your dataset is too small for 10-fold cross-validation
+
 The application automatically switches to an 80/20 train-test split for small datasets
+
 For meaningful results, use datasets with at least 10-15 instances
 
-2. JavaFX runtime components missing
+
+3. JavaFX runtime components missing
+
 Make sure you're using Java 21+ and have the JavaFX dependencies in your pom.xml
 
