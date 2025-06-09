@@ -2,7 +2,6 @@
 
 A JavaFX application for comparing classification and regression algorithms from the WEKA machine learning library.
 
-![Application Screenshot](screenshot.png) *(Example screenshot placeholder)*
 
 ## Features
 
