@@ -49,15 +49,24 @@ public class WekaComparisonApp extends Application {
         HBox buttonBox = new HBox(10, compareBtn, visualizeBtn);
         buttonBox.setPadding(new javafx.geometry.Insets(10));
 
-        // Create output area
+        // Create output area - now with VBox.setVgrow priority
         outputArea = new TextArea();
         outputArea.setEditable(false);
         outputArea.setWrapText(true);
 
-        // Create main layout
-        VBox mainLayout = new VBox(10, menuBar, modeBox, buttonBox, outputArea);
+        // Create a container for the controls
+        VBox controlsContainer = new VBox(10, menuBar, modeBox, buttonBox);
 
-        // Set scene
+        // Create main layout with BorderPane for better space management
+        BorderPane mainLayout = new BorderPane();
+        mainLayout.setTop(controlsContainer);
+        mainLayout.setCenter(outputArea);
+
+        // Make the output area expand to fill available space
+        BorderPane.setMargin(outputArea, new javafx.geometry.Insets(0, 10, 10, 10));
+        VBox.setVgrow(outputArea, Priority.ALWAYS);
+
+        // Set scene with minimum size
         Scene scene = new Scene(mainLayout, 800, 600);
         primaryStage.setScene(scene);
         primaryStage.show();
